@@ -1,0 +1,252 @@
+html{
+    background-color: rgb(179, 179, 179);
+}
+header{
+    margin: auto;
+    text-align: center;
+}
+.headerBar{
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    background-color: rgb(179, 179, 179);
+    height: 60px;
+}
+header figure img{
+    position: relative;
+    right: 50px;
+    width: 300px;
+}
+#shortcuts{
+    position: relative;
+    height: 30px;
+    display: flex;
+    gap: 20%;
+    color: black;
+}
+#navigation{
+    position: relative;
+    left: 0px;
+    right: 0px;
+    width: 50%;
+}
+#image{
+    width: 50%;
+    position: relative;
+    right: 10%;
+}
+@media(max-width:1400px){
+    #image{
+        left: 28%;
+        text-align: center;
+        margin: auto;
+    }
+    #shortcuts{
+        position: relative;
+        top: 60px;
+        right: 200px;
+        display: flex;
+        gap: 0%;
+        text-align: center;
+    }
+    #mainTitleBox{
+        position: relative;
+        top: 330px;
+    }
+    .headerBar{
+        height: 110px;
+    }
+}
+@media(max-width:800px){
+    #image{
+        position: relative;
+        bottom: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    #mainTitleBox{
+        position: relative;
+        top: 400px;
+    }
+    .headerBar{
+        height: 200px;
+    }
+    #navigation nav{
+        position: relative;
+        right: 190px;
+    }
+}
+
+#shortcuts a{
+    text-decoration: none;
+    padding: 12px;
+    font-size: 30px;
+    color: black;
+
+}
+#mainTitleBox{
+    position: relative;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    top: 100px;
+}
+#emailBox{
+    width: 250px;
+    border-radius: 1px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submitButton{
+    position: relative;
+    top: 20px;
+    background-color: yellow;
+    border: none;
+    height: 30px;
+    width: 120px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.submitButton:hover{
+    animation-duration: 3s;
+    animation-name: animationButton;
+    animation-fill-mode: forwards;
+}
+@keyframes animationButton {
+    0% {
+        transform: scale(1.1);
+        background-color: yellow;
+    }
+    50% {
+        transform: scale(1.15);
+        background-color: rgb(228, 153, 13);
+    }
+    100% {
+        transform: scale(1.3);
+        background-color: rgb(255, 166, 1);
+    }
+}
+#features{
+    position: relative;
+    top: 150px;
+}
+#list li{
+    list-style-image: image("./images/original_trombones.png");
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+.list-box{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    width: 1000px;
+    text-align: left;
+    grid-template-columns: 800px;
+    grid-template-rows: 20px;
+}
+#video{
+    position: relative;
+    top: 150px;
+    right: 130px;
+    text-align: center;
+    border: none;
+}
+#pricing{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 220px;
+    justify-self: center;
+    justify-items: center;
+    justify-content:center;
+    gap: 20px;
+}
+.box{
+    background-color: rgb(179, 179, 179);
+    border: 1px black solid;
+    width: 300px;
+}
+.price-title{
+    background-color: rgb(160, 160, 160);
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+.video{
+    width: 600px;
+    height: 300px;
+}
+.money{
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}
+.sentence{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.select{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+    align-content: center;
+    align-self: auto;
+    align-items: center;
+    height: 40px;
+}
+.footer-link-box{
+    position: relative;
+    top: 250px;
+    display: grid;
+    align-content: center;
+    align-self: auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: right;
+    gap: 40px;
+}
+.footer-link-box nav{
+    width: 915px;
+    background-color: rgb(160, 160, 160);
+    float: right;
+    padding: 20px;
+    height: 40px;
+}
+.footer-link{
+    width: 400px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+}
+footer{
+    align-content: center;
+    align-self: auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+#copy{
+    position: relative;
+    bottom: 90px;
+    left: 335px;
+    font-family: Arial, Helvetica, sans-serif;
+}
