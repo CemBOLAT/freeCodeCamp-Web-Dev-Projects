@@ -1,0 +1,308 @@
+:root{
+    color-scheme: dark;
+    font-family: Arial, Helvetica, sans-serif;
+    --extention: .extention;
+}
+html{
+    background-color: rgb(29, 28, 28);
+
+}
+#bar{
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    background-color: rgb(238, 62, 62);
+    float: right;
+    justify-content: right;
+    align-items:center;
+    justify-items: right;
+    justify-self: right;
+}
+#shortcuts{
+    position: relative;
+    float: right;
+    display: flex;
+    gap : 40px;
+    right: 50px;
+}
+#shortcuts span a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    float: right;
+    height: 80px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shortcuts span a:hover{
+    background-color: rgb(63, 63, 230);
+}
+#welcome-section{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items:center;
+    justify-items: right;
+    justify-self: right;
+    height: 100vh;
+    background-color: rgb(29, 28, 28);
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+#hey{
+    font-size: 50px;
+}
+#webDev{
+    position: relative;
+    bottom: 30px;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(245, 73, 73);
+}
+#projects{
+    background-color: rgb(74, 74, 235);
+    height: 1600px;
+}
+#projectsTitle{
+    padding: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+#hr{
+    position: relative;
+    bottom: 25px;
+    width: 1000px;
+}
+#projectPhotos{
+    height: 40px;
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1400px;
+    margin: auto;
+}
+#projectPhotos nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+#projectPhotos div img{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 400px;
+    display: flex;
+    width: auto;
+    position: relative;
+    left: 40px;
+}
+.description{
+    background-color: grey;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    left: 40px;
+    color: white;
+    padding: 35px;
+    font: bold;
+    font-size: 23px;
+}
+.divs a {
+    text-decoration: none;
+}
+#button button{
+    display: flex;
+    width: 150px;
+    text-align: center;
+    background-color: grey;
+    border: 0px;
+    padding: 10px;
+    transition: transform 0.5s;
+}
+#button button a{
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    width: 150px;
+}
+#button{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(5, 5, 5);
+    position: relative;
+    left: 620px;
+}
+#button button:hover{
+    box-shadow: 10px;
+    box-sizing: border-box;
+    transform:translateY(-10px) scale(1.2);
+}
+@keyframes buttonMix{
+    0%{
+        background-color: grey;
+    }
+    50%{
+        background-color: rgb(7, 22, 92);
+    }
+    100%{
+        background-color: rgb(7, 22, 42);
+    }
+}
+#footerBox{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    justify-items: center;
+    justify-self: center;
+    height: 70vh;
+    background-color: rgb(29, 28, 28);
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+#let{
+    font-size: 40px;
+    text-align: center;
+}
+#how{
+    text-align: center;
+    font-size: 20px
+}
+#helloBox{
+    display: block;
+}
+#shortButton{
+    position: relative;
+    display: flex;
+    gap: 40px;
+    font-size: 30px;
+}
+.eachBox{
+    position: relative;
+    transition: transform 0.5s;
+    margin-bottom: 150px;
+}
+.eachBox:hover{
+    box-shadow: 10px;
+    box-sizing: border-box;
+    transform:translateY(10px);
+}
+#line{
+    height: 6px;
+    color: red;
+    border: none;
+    background-color: red;
+}
+#footer{
+    height: 10vh;
+    background-color: rgb(29, 28, 28);
+    display: flex;
+    gap: 500px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items:center;
+    justify-items: center;
+    justify-self: center;
+    position: relative;
+    text-align: center;
+}
+#paragraph{
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    justify-items: center;
+    justify-self: center;
+    position: relative;
+    text-align: center;
+
+}
+#copy{
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    justify-items: center;
+    justify-self: center;
+    position: relative;
+    text-align: center;
+}
+@media(max-width:1450px){
+    #projectPhotos{
+        width: 1000px;
+    }
+    #hr{
+        width: 700px;
+    }
+    #projects{
+        background-color: rgb(74, 74, 235);
+        height: 2200px;
+    }
+    #button{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 400px;
+    }
+}
+@media(max-width:800px){
+    #projectPhotos{
+        width: 500px;
+    }
+    #projects{
+        background-color: rgb(74, 74, 235);
+        height: 4400px;
+    }
+    #button{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 160px;
+    }
+    #footer{
+        height: 60vh;
+    }
+    #copy{
+        font-size: 20px;
+        display: grid;
+        position: relative;
+        right: 60px;
+        width: max-content;
+    }
+    #paragraph{
+        font-size: 20px;
+        display: grid;
+        justify-content: center;
+        align-items:center;
+        justify-items: center;
+        justify-self: center;
+        position: relative;
+        text-align: center;
+        left: 40px;
+    }
+}
+#profile-link{
+    text-decoration: none;
+    color: white;
+}
+
+.images{
+    width: 400px !important;
+    height:  400px !important;
+}
+
+.divs{
+    transition: transform 0.5s;
+}
+.divs:hover{
+    transform: scale(1.05) ;
+}
