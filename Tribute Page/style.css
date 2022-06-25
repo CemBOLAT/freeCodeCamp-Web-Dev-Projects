@@ -1,3 +1,6 @@
+*{
+    font-size: 30px;
+}
 #main{
     background-color: rgb(223, 219, 219);
     border-radius: 20px;
@@ -16,6 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 header div div p{
     text-align: center;
@@ -30,15 +34,6 @@ header div div p{
     padding: 40px;
     background-color: white;
 }
-@media(min-height: 400px){
-    img{
-        width: 50%;
-        height: auto;
-    }
-    .list{
-        font-size: 25px;
-    }
-}
 #list-title{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -46,7 +41,7 @@ header div div p{
     padding: 40px;
 }
 .list{
-    width: 518px;
+    width: 70%;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
@@ -59,11 +54,25 @@ header div div p{
     text-align: center;
 }
 #article-box{
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    display: grid;
+    display: flex;
     width: fit-content;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-self: center;
+    padding: 40px;
 }
 #article-box em{
     align-items: center;
+}
+#figure img{
+    width: 50%;
+}
+@media screen and (max-width:768px) {
+    *{
+        font-size: 20px;
+    }
 }
