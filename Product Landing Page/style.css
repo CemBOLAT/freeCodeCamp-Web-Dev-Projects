@@ -2,9 +2,6 @@
     --nav-color: rgb(36, 99, 194);
     --font: cursive;
 }
-
-/*query kaldı tablete kadar yapıldı*/ 
-
 *{
     scroll-behavior: smooth;
     margin: 0;
