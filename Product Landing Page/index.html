@@ -1,158 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCC: Product Landing Page</title>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="headerBar">
-            <div id="image">
-                <figure>
-                    <img src="./images/original_trombones.png" alt="logo">
-                </figure>
-            </div>
-            <div id="navigation">
-                <nav id="shortcuts">
-                    <a href="#features">Features</a>
-                    <a href="#video">How It Works</a>
-                    <a href="#pricing">Pricing</a>
+    <div id="container">
+        <div id="nav-bar">
+            <a id="nav-bar-photo" href="#">
+                <div id="logo-part">
+                    <div id="logo"></div>
+                    <div id="brand-name">SANDIES</div>
+                </div>
+            </a>
+            <div id="nav-container">
+                <nav id="nav">
+                    <a class="nav-item" href="#main-part">HOME</a>
+                    <a class="nav-item" href="#services-part">MENU</a>
+                    <a class="nav-item" href="#contact-part">CONTACT</a>
                 </nav>
             </div>
-        </div>
-    </header>
-    <main>
-        <div id="mainTitleBox">
-            <section id="title">
-                <h1>Handcrafted, home-made masterpieces</h1>
-            </section>
-            <form target="_blank" action="https://www.freecodecamp.org/email-submit" method="get">
-                <label for="emailBox">
-                    <input required type="email" name="emailBox"
-                     placeholder="Enter your email address" id="emailBox">
-                </label>
-                <br>
-                <label for="submitButton">
-                    <input id="submitButton" class="submitButton" name="submitButton" 
-                    type="submit" value="Get Started">
-                </label> 
-            </form>
-        </div>
-        <div id="features">
-            <ul id="list">
-                <li>
-                <section class="list-box">
-                    <h1>Premium Materials</h1>
-                    <br>
-                    <p id="premMat">Our trombones use the shiniest 
-                        brass which is sourced locally. 
-                        This will increase the longevity 
-                        of your purchase.</p>
-                    </section>
-                    <br>
-                </li>
-                <li>
-                    <section class="list-box">
-                        <h1>Fast Shipping</h1>
-                        <br>
-                        <p id="fastShip">We make sure you recieve your 
-                            trombone as soon as we have finished making it. 
-                            We also provide free returns if you are 
-                            not satisfied.
-                        </p>
-                    </section>
-                    <br>
-                </li>
-                <li>
-                    <section class="list-box">
-                        <h1>Quality Assurance</h1>
-                        <br>
-                        <p id="quaAssu">For every purchase you make, 
-                            we will ensure there are no damages or 
-                            faults and we will check and test the 
-                            pitch of your instrument.
-                        </p>
-                    </section>
-                </li>
-            </ul>
-        </div>
-        <div id="video">
-            <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
-        </div>
-        <div id="pricing">
-            <div class="box" id="tenor">
-                <section>
-                    <h1 class="price-title">TENOR TROMBONE</h1>
-                </section>
-                <section>
-                    <h1 class="money">$600</h1>
-                </section>
-                <div class="sentence">
-                    <p>
-                        Lorem ipsum.<br>
-                        Lorem ipsum.<br>
-                        Lorem ipsum dolor.<br>
-                        Lorem ipsum<br>
-                    </p>
-                </div>
-                <div class="button select">
-                    <button class="select submitButton">SELECT</button>
-                </div>
+        </div>  
+        <div id="main-part">
+            <div id="main-part-title">SANDIES BRINGS YOU EVERYTHING FOR BEING HAPPY</div>
+            <div id="userNameEntrence-box">
+                <div id="box-comment">Get Notified For Discounts And New Menu Items !</div>
+                <form id="subs-form">
+                    <label id="containerlabel" for="user-box">@</label>
+                    <input autocomplete="off" placeholder="USERNAME" autocapitalize="text" type="text" id="user-box" name="user-box">
+                    <button id="button" type="submit">Subscribe</button>
+                </form>
             </div>
-            <div class="box" id="bass">
-                <section>
-                    <h1 class="price-title">BASS TROMBONE</h1>
-                </section>
-                <section>
-                    <h1 class="money">$900</h1>
-                </section>
-                <div class="sentence">
-                    <p>
-                        Lorem ipsum. <br>
-                        Lorem ipsum. <br>
-                        Lorem ipsum dolor. <br>
-                        Lorem ipsum<br>
-                    </p>
+        </div>
+        <div id="services-part">
+            <div id="services-title">OUR DESERTS <span class="mark">ARE IMPRESSIVE</span></div>
+            <div id="service-comment">Recomended by Chefs</div>
+            <div id="element-part">
+                <div style="--width: 200px; --widthTel:160px" class="element">
+                    <div style="--width: 200px; --widthTel:160px" class="img-container">
+                        <img style="--width: 200px; --widthTel:160px" id="ice-cream-image" width="300px" src="./images/ice-cream.jpeg" alt="">
+                    </div>
+                    <div class="info-part">
+                        <div class="element-title">Ice-cream</div>
+                        <div class="element-description">Crafted by hand, served with Love</div>
+                        <div class="view-button">View here</div>
+                    </div>
                 </div>
-                <div class="button select">
-                    <button class="select submitButton">SELECT</button>
+                <div style="--width: 200px; --widthTel:140px" class="element">
+                    <div style="--width: 200px; --widthTel:140px" class="img-container">
+                        <img style="--width: 200px; --widthTel:140px" id="candies-image" width="300px" src="./images/candies.jpg" alt="">
+                    </div>
+                    <div class="info-part">
+                        <div class="element-title">Candies</div>
+                        <div class="element-description">Crafted by hand, served with Love</div>
+                        <div class="view-button">View here</div>
+                    </div>
                 </div>
-            </div>
-            <div class="box" id="valve">
-                <section>
-                    <h1 class="price-title">VALVE TROMBONE</h1>
-                </section>
-                <section>
-                    <h1 class="money">$1200</h1>
-                </section>
-                <div class="sentence">
-                    <p>
-                        Plays similar to a Trumpet <br>
-                        Great for Jazz Bands <br>
-                        Lorem ipsum dolor <br>
-                        Lorem ipsum <br>
-                    </p>
+                <div style="--width: 220px; --widthTel:140px" class="element">
+                    <div style="--width: 220px; --widthTel:140px" class="img-container">
+                        <img style="--width: 220px; --widthTel:140px" id="fudgy-image" width="270px" src="./images/fudgy brownies.jpg" alt="">
+                    </div>
+                    <div class="info-part">
+                        <div class="element-title">Fudgy Brownies</div>
+                        <div class="element-description">Crafted by hand, served with Love</div>
+                        <div class="view-button">View here</div>
+                    </div>
                 </div>
-                <div class="button select">
-                    <button class="select submitButton">SELECT</button>
+                <div style="--width: 180px; --widthTel:140px" class="element">
+                    <div style="--width: 180px; --widthTel:140px" class="img-container">
+                        <img style="--width: 180px; --widthTel:140px" id="milkshake-image" width="270px" src="./images/milkshake.jpeg" alt="">
+                    </div>
+                    <div class="info-part">
+                        <div class="element-title">Milkshake</div>
+                        <div class="element-description">Crafted by hand, served with Love</div>
+                        <div class="view-button">View here</div>
+                    </div>
+                </div>
+                <div style="--width: 240px; --widthTel:140px" class="element">
+                    <div style="--width: 240px; --widthTel:140px" class="img-container">
+                        <img style="--width: 240px; --widthTel:140px" id="cake-image" width="360px" src="./images/cakes.jpg" alt="">
+                    </div>
+                    <div class="info-part">
+                        <div class="element-title">Cakes</div>
+                        <div class="element-description">Crafted by hand, served with Love</div>
+                        <div class="view-button">View here</div>
+                    </div>
+                </div>
+                <div style="--width: 220px; --widthTel:140px" class="element">
+                    <div style="--width: 220px; --widthTel:140px" class="img-container">
+                        <img style="--width: 220px; --widthTel:140px" id="chocolate-image" width="330px" src="./images/chocolate.jpeg" alt="">
+                    </div>
+                    <div class="info-part">
+                        <div class="element-title">Chocolate</div>
+                        <div class="element-description">Crafted by hand, served with Love</div>
+                        <div class="view-button">View here</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <div>
-            <div class="footer-link-box">
-                <nav>
-                    <span><a class="footer-link" href="#">Privacy</a></span> &nbsp;&nbsp;
-                    <span><a class="footer-link" href="#">Terms</a></span> &nbsp;&nbsp;
-                    <span><a class="footer-link" href="#">Contact</a></span> &nbsp;&nbsp;
-                </nav>
-                <p id="copy">Copyright 2016, Original Trombones</p>
+        <div id="contact-part">
+            <div id="contact-title">
+                Recomend us <span class="mark">WHATEVER</span> you want
             </div>
+            <form id="contact-form">
+                <label for="name-part">Name</label>
+                <input autocomplete="off" required minlength="3" id="name-part" type="text" placeholder="NAME">
+                <label for="email-part">EMAIL</label>
+                <input autocomplete="off" required id="email-part" type="email" placeholder="E-mail">
+                <label for="tel-part">Telephone Number</label>
+                <input autocomplete="off" required id="tel-part" type="tel" placeholder="Phono Number">
+                <label for="text-area">Message</label>
+                <input autocomplete="off" id="text-area" placeholder="Enter your Message Here">
+            </form> 
+            <button id="form-submit" type="submit">Submit</button>
         </div>
-    </footer>
+        <div id="footer-part">
+            <div id="footer-title">SOCIAL LINK</div>
+            <nav id="footer-nav">
+                <a target="_blank" href="https://github.com/CemBOLAT/CemBOLAT"> 
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/cemal-bolat-a5188721b/"> 
+                    <ion-icon name="logo-linkedIn"></ion-icon>
+                </a>
+            </nav>
+            <div id="footer-me">&copy;Cemal Bolat</div>
+        </div>
+        <a id="home-con" href="#">
+            <div id="home-button">
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </div>
+        </a>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
