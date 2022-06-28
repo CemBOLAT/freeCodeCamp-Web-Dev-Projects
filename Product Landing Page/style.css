@@ -1,252 +1,659 @@
-html{
-    background-color: rgb(179, 179, 179);
+:root{
+    --nav-color: rgb(36, 99, 194);
+    --font: cursive;
 }
-header{
-    margin: auto;
-    text-align: center;
+
+/*query kaldı tablete kadar yapıldı*/ 
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.headerBar{
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    position: fixed;
+#container{
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+#nav-bar{
     z-index: 1;
+    padding: 0px 80px;
     display: flex;
-    background-color: rgb(179, 179, 179);
-    height: 60px;
+    flex-direction: row;
+    height: 150px;
+    position: fixed;
+    width: 100vw;
+    background-color: var(--nav-color);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px var(--nav-color);
 }
-header figure img{
-    position: relative;
-    right: 50px;
-    width: 300px;
-}
-#shortcuts{
-    position: relative;
-    height: 30px;
+#logo-part{
     display: flex;
-    gap: 20%;
+    align-items: center;
+}
+#logo{
+    height: 150px;
+    width: 100px;
+    background-image: url(./images/header-img.png);
+    background-size: cover;
+}
+#nav-bar-photo{
+    text-decoration: none;
+}
+#brand-name{
+    font-size: 30px;
+    font-family: var(--font);
+    font-weight: bolder;
+    color: black;
+    user-select: none;
+}
+#nav{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    font-family: var(--font);
     color: black;
 }
-#navigation{
+#nav a {
     position: relative;
-    left: 0px;
-    right: 0px;
-    width: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#image{
-    width: 50%;
+#nav a::before{
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: -5px;
+    background-color: transparent;
+    left: 10px;
+    transition: left 200ms linear;
+    border: 3px black solid;
+    opacity: 0;
+}
+#nav a::after{
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    bottom: -5px;
+    background-color: transparent;
+    right: 10px;
+    border: 3px black solid;
+    transition: right 200ms linear;
+    opacity: 0;
+}
+#nav a:hover::before{
+    left: 55px;
+    opacity: 1;
+}
+#nav a:hover::after{
+    right: 55px;
+    opacity: 1;
+}
+#main-part{
+    display: flex;
+    justify-content: center;
+    top: 140px;
     position: relative;
-    right: 10%;
+    background-size: cover;
+    height: 500px;
+    background-image: linear-gradient(rgba(3, 3, 3, 0.2),rgba(8, 40, 109, 0.51)), url(https://images.unsplash.com/photo-1469533667357-006056eaf780?ixlib=rb-0.3.5&s=37b9a32…&auto=format&fit=crop&w=1050&q=80);
 }
-@media(max-width:1400px){
-    #image{
-        left: 28%;
-        text-align: center;
-        margin: auto;
+#main-part-title{
+    position: absolute;
+    font-size: 30px;
+    font-family: sans-serif;
+    top: 150px;
+    font-weight: 700;
+    color: white;
+}
+#userNameEntrence-box{
+    height: 120px;
+    position: absolute;
+    width: 900px;
+    top: 250px;
+    background-color: rgb(76, 0, 255);
+    border-radius: 2vh;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+}
+#box-comment{
+    font-size: 18px;
+    font-family: var(--font);
+    color: white;
+}
+#containerlabel{
+    background-color: gray;
+    padding: 10px 20px;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#subs-form{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    gap: 10px;
+    top: 45px;
+    position: absolute;
+    
+}
+#user-box{
+    width: 500px;
+    padding: 0px 20px;
+}
+#button{
+    width: 150px;
+    font-size: 20px;
+    transition: 300ms all linear;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+#button:hover{
+    background-color: black;
+    color: white;
+}
+#user-box:focus{
+    border: 5px solid var(--nav-color);
+}
+#services-part{
+    top: 140px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(36, 36, 36, 0.726);
+    padding: 50px;
+    height: 1600px;
+}
+#services-title{
+    font-family: var(--font);
+    font-size: 40px;
+    animation-name: pulsing;
+    animation-timing-function: linear;
+    animation-duration: 1000ms;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+@keyframes pulsing {
+    0%{
+        opacity: 1;
     }
-    #shortcuts{
-        position: relative;
-        top: 60px;
-        right: 200px;
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.mark{
+    text-shadow: 0px 0px 5px beige;
+}
+#service-comment{
+    position: absolute;
+    top: 110px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+    padding: 20px;
+    width: 700px;
+    text-align: center;
+    border-bottom: 2px white solid;
+    letter-spacing: 0.5rem;
+}
+#element-part{
+    height: 1300px;
+    width: 1000px;
+    top: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.element{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px beige;
+    position: relative;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+.img-container img{
+    border-radius: 15px 15px 0px 0px;
+}
+.info-part{
+    padding: 15px;
+    height: 185px;
+    background-color: white;
+    border-radius: 0px 0px 15px 15px;
+}
+.element-title{
+    padding: 10px;
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 800;
+}
+.element-description{
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 1000;
+    padding: 10px 0px;
+}
+.view-button{
+    background-color: black;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-family: var(--font);
+    transition: 300ms all linear;
+    border-radius: 20px;
+    user-select: none;
+    box-shadow: 0px 0px 10px 2px gray;
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+}
+.view-button:hover{
+    background-color: gray;
+    color: white;
+}
+#contact-part{
+    height: 700px;
+    position: relative;
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #343A40;
+}
+#contact-title{
+    color: white;
+    font-size: 40px;
+    font-family: var(--font);
+    border-bottom: 2px white solid;
+    height: 70px;
+    width: 900px;
+    text-align: center;
+}
+#contact-form{
+    position: relative;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    font-family: var(--font);
+    color: white;
+    font-weight: 1000;
+}
+#name-part,
+#tel-part,
+#email-part{
+    height: 40px;
+    width: 500px;
+    padding: 0px 20px;
+    font-size: 20px
+}
+#text-area{
+    padding: 20px 20px;
+    font-size: 20px;
+    max-width: 500px;
+}
+#form-submit{
+    background-color: white;
+    box-shadow: 0px 0px 10px white;
+    border: none;
+    z-index: 44;
+    height: 40px;
+    width: 450px;
+    position: relative;
+    top: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 300ms all linear;
+    cursor: pointer;
+}
+#form-submit:hover{
+    background-color: black;
+    box-shadow: 0px 0px 10px black;
+    color: white;
+}
+#footer-part{
+    background-color: crimson;
+    position: relative;
+    top: 130px;
+    height: 120px;
+    font-weight: 1000;
+    text-align: center;
+    font-family: var(--font);
+    padding: 20px;
+}
+#footer-nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+@media screen and (max-width:1024px) {
+    #element-part{
+        transition: width 200ms linear;
+        width: 700px;
+    }
+    img{
+        transition: width 200ms linear;
+        width: var(--width);
+    }
+    .img-container{
+        transition: width 200ms linear;
+        width: var(--width);
+    }
+    .element{
+        transition: width 200ms linear;
+        width: var(--width);
+    }
+    .view-button{
+        transition: bottom 200ms linear;
+        bottom: 20px;
+    }
+    #main-part-title{
+        transition: all 200ms linear;
+        font-size: 20px;
+    }
+    #userNameEntrence-box{
+        transition: width 200ms linear;
+        width: 700px;
+    }
+    #subs-form{
+        transition: width 200ms linear;
+        width: 650px;
+    }
+    #services-title{
+        transition: all 200ms linear;
+        font-size: 30px;
+    }
+    #service-comment{
+        transition: all 200ms linear;
+        font-size: 20px;
+        width: 500px;
+    }
+    #contact-title{
+        font-size: 20px;
+        height: 35px;
+        width: 50%;
+        transition: all 200ms linear;
+    }
+}
+@media screen and (max-width:768px) {
+    #nav a{
+        width: 100px;
+        font-size: 22px;
+    }
+    #nav-bar{
+        transition: all linear 300ms;
+        position: absolute;
+    }
+    #form-submit{
+        height: 30px;
+        width: 305px;
+        top: 50px;
+        font-size: 20px;
+    }
+    #contact-form{
+        width: 70%;
         display: flex;
-        gap: 0%;
-        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        left: 5%;
     }
-    #mainTitleBox{
+    #name-part,
+    #email-part,
+    #tel-part,
+    #text-area{
+        transition: all linear 300ms;
+        width: 80%;
+        height: 30px;
+        font-size: 12px;
+    }
+    #contact-title{
+        font-size: 15px;
+        height: 35px;
+        width: 50%;
+        transition: all 200ms linear;
+    }
+    #element-part{
+        transition: width 200ms linear;
+        width: 500px;
+    }
+    #main-part-title{
+        font-size: 15px;
+    }
+    #box-comment{
+        font-size: 15px;
+    }
+    #userNameEntrence-box{
+        width: 70%;
+    }
+    #subs-form{
+        width: 90%;
+    }
+    #button{
+        font-size: 12px;
+    }
+    #nav-bar{
+        padding: 0;
+    }
+    #logo-part{
+        width: 100%;
+        transition: all linear 500ms;
         position: relative;
-        top: 330px;
-    }
-    .headerBar{
-        height: 110px;
-    }
-}
-@media(max-width:800px){
-    #image{
-        position: relative;
-        bottom: 50px;
+        opacity: 0.2;
         display: flex;
         justify-content: center;
     }
-    #mainTitleBox{
+    #logo{
+        visibility: hidden;
+        opacity: 0;
+        z-index: -5;
+    }
+    #brand-name{
+        font-size: 400%;
+    }
+    #nav{
+        transition: 1000ms all linear;
+        display: flex;
+        justify-content: center;
         position: relative;
-        top: 400px;
+        top: -100px;
     }
-    .headerBar{
-        height: 200px;
+    .nav-item::before,
+    .nav-item::after{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -99;
     }
-    #navigation nav{
+    .nav-item:hover{
+        color: white !important;
+        text-shadow: 0px 0px 5px beige;
+    }
+    #nav-bar{
+        display: inline;
+    }
+}
+@media screen and (max-width:700px) {
+    #userNameEntrence-box{
+        height: 60px;
+    }
+    #services-title{
+        font-size: 15px;
+    }
+    #service-comment{
+        top: 70px;
+        font-size: 12px;
+        width: 70%;
+    }
+    #box-comment{
+        font-size: 8px;
+    }
+    #subs-form{
+        width: 300px;
+        height: 30px;
+    }
+    #containerlabel{
+        visibility: hidden;
+        opacity: 0;
+        z-index: -99;
+        width: 0px;
+        height: 40px;
+    }
+    #user-box{
+        top: -15px;
         position: relative;
-        right: 190px;
+        right: 20px;
+        font-size: 8px;
+        height: 20px;
+    }
+    #button{
+        top: -15px;
+        height: 20px;
+        position: relative;
+        right: 20px;
+    }
+    #contact-part{
+        padding: 40px 10px;
+    }
+    #services-part{
+        height: 1400px;
+    }
+    #element-part{
+        transition: width 200ms linear;
+        width: 400px;
+        height: 1100px;
+        padding: 10px;
+    }
+    img{
+        transition: width 200ms linear;
+        width: var(--widthTel);
+    }
+    .img-container{
+        transition: width 200ms linear;
+        width: var(--widthTel);
+    }
+    .element{
+        transition: width 200ms linear;
+        width: var(--widthTel);
+    }
+    .view-button{
+        width: 100px;
+        font-size: 10px;
+    }
+    #contact-title{
+        font-size: 74%;
+    }
+    #main-part-title{
+        font-size: 12px;
+    }
+    .element-description{
+        font-size: 10px;
+    }
+    #subs-form{
+        height: 0px;
+    }
+    #contact-part{
+        height: 550px;
     }
 }
-
-#shortcuts a{
-    text-decoration: none;
-    padding: 12px;
-    font-size: 30px;
-    color: black;
-
-}
-#mainTitleBox{
-    position: relative;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    top: 100px;
-}
-#emailBox{
-    width: 250px;
-    border-radius: 1px;
-    height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.submitButton{
-    position: relative;
-    top: 20px;
-    background-color: yellow;
-    border: none;
-    height: 30px;
-    width: 120px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.submitButton:hover{
-    animation-duration: 3s;
-    animation-name: animationButton;
-    animation-fill-mode: forwards;
-}
-@keyframes animationButton {
-    0% {
-        transform: scale(1.1);
-        background-color: yellow;
+@media screen and (max-width:435px) {
+    #contact-title{
+        font-size: 6px;
+        height: 15px;
     }
-    50% {
-        transform: scale(1.15);
-        background-color: rgb(228, 153, 13);
+    #main-part-title{
+        font-size: 8px;
     }
-    100% {
-        transform: scale(1.3);
-        background-color: rgb(255, 166, 1);
+    #services-title{
+        font-size: 12px;
+    }
+    #service-comment{
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+    }
+    img{
+        transition: width 200ms linear;
+        width: calc(var(--widthTel) - 50px);
+    }
+    .img-container{
+        transition: width 200ms linear;
+        width: calc(var(--widthTel) - 50px);
+    }
+    .element{
+        transition: width 200ms linear;
+        width: calc(var(--widthTel) - 50px);
+    }
+    #element-part{
+        width: 250px;
+    }
+    .element{
+        padding: 0px 0px;
+    }
+    .element-title{
+        font-size: 10px;
+    }
+    .info-part{
+        height: 150px;
+        padding: 5px;
+    }
+    .view-button{
+        font-size: 4px;
+        width: 50px;
+    }
+    #name-part,
+    #email-part,
+    #tel-part{
+        transition: all linear 300ms;
+        width: 50%;
+        height: 30px;
+        font-size: 8px;
+    }
+    #text-area{
+        width: 100%;
+    }
+    #subs-form{
+        width: 200px;
     }
 }
-#features{
-    position: relative;
-    top: 150px;
-}
-#list li{
-    list-style-image: image("./images/original_trombones.png");
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
-}
-
-.list-box{
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    width: 1000px;
-    text-align: left;
-    grid-template-columns: 800px;
-    grid-template-rows: 20px;
-}
-#video{
-    position: relative;
-    top: 150px;
-    right: 130px;
-    text-align: center;
-    border: none;
-}
-#pricing{
+#home-button{
+    background-color: rgb(0, 255, 42);
+    height: 35px;
+    width: 35px;
+    position: fixed;
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    top: 220px;
-    justify-self: center;
-    justify-items: center;
-    justify-content:center;
-    gap: 20px;
-}
-.box{
-    background-color: rgb(179, 179, 179);
-    border: 1px black solid;
-    width: 300px;
-}
-.price-title{
-    background-color: rgb(160, 160, 160);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     font-size: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-}
-.video{
-    width: 600px;
-    height: 300px;
-}
-.money{
-    text-align: center;
-    position: relative;
+    right: 20px;
     bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 26px;
+    box-shadow: 0px 0px 10px lime;
 }
-.sentence{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.select{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 40px;
-    align-content: center;
-    align-self: auto;
-    align-items: center;
-    height: 40px;
-}
-.footer-link-box{
-    position: relative;
-    top: 250px;
-    display: grid;
-    align-content: center;
-    align-self: auto;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    text-align: right;
-    gap: 40px;
-}
-.footer-link-box nav{
-    width: 915px;
-    background-color: rgb(160, 160, 160);
-    float: right;
-    padding: 20px;
-    height: 40px;
-}
-.footer-link{
-    width: 400px;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-}
-footer{
-    align-content: center;
-    align-self: auto;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    justify-items: center;
-}
-#copy{
-    position: relative;
-    bottom: 90px;
-    left: 335px;
-    font-family: Arial, Helvetica, sans-serif;
+#home-con{
+    color: white;
 }
